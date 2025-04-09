@@ -2,5 +2,5 @@
 
 public class AssignmentRequestDto
 {
-    
+    public Guid Id { get; set; }
 }

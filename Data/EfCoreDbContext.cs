@@ -17,7 +17,6 @@ namespace TaskTrackr.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Student>().ToTable("Students");
-            modelBuilder.Entity<Assignment>().ToTable("Assignments");
         }
 
     }
