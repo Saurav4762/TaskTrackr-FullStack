@@ -1,6 +1,14 @@
-﻿namespace TaskTrackr.Services.Interface;
+﻿using TaskTrackr.Contratcs.Request;
+using TaskTrackr.Entities;
 
-public class IStudentService
+namespace TaskTrackr.Services.Interface;
+
+public interface IStudentService
 {
+    Task<Student> AddStudentAsync(StudentRequestDto dto);
+    
+    Task<Student> UpdateStudentAsync(int id, StudentRequestDto dto);
+    
+    Task DeleteStudentAsync(int id);
     
 }
