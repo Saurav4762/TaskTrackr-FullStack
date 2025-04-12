@@ -2,5 +2,7 @@
 
 public class AssignmentRequestDto
 {
-    public Guid Id { get; set; }
+    public string AssignmentName { get; set; }
+    
+    public string AssignmentDescription { get; set; }
 }
