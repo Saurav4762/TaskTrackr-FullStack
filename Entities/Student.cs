@@ -11,4 +11,5 @@ public class Student
     public Guid AssignmentId { get; set; }
     
     public List<Assignment>? Assignments { get; set; }
+    
 }

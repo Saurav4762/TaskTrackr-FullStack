@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using TaskTrackr.Data;
+using TaskTrackr.Repository;
+using TaskTrackr.Repository.Interface;
+using TaskTrackr.Services;
+using TaskTrackr.Services.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +15,11 @@ builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IAssignmentService, AssignmentService>();
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+
+
 
 builder.Services.AddDbContext<EfCoreDbContext>(b =>
 {

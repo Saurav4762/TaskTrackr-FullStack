@@ -17,7 +17,7 @@ public class StudentService: IStudentService
 
     public async Task<Student> AddStudentAsync(StudentRequestDto dto)
     {
-        var studentExists = await _dbcontext.Students.AnyAsync(s => s.Id == dto.StudentId);
+        var studentExists = await _dbcontext.Students.AnyAsync(s => s.Id == dto.AssignmentId);
         //validate studentId
         if (!studentExists)
         {
@@ -26,7 +26,7 @@ public class StudentService: IStudentService
 
         var student = new Student()
         {
-            Id = dto.StudentId,
+            Id = dto.AssignmentId,
             FullName = dto.FullName,
             Email = dto.Email,
             AssignmentId = dto.AssignmentId,
@@ -51,7 +51,7 @@ public class StudentService: IStudentService
         student.FullName = dto.FullName;
         student.Email = dto.Email;
         student.AssignmentId = dto.AssignmentId;
-        student.Id = dto.StudentId;
+        student.Id = dto.AssignmentId;
         
         _dbcontext.Update(student);
         await _dbcontext.SaveChangesAsync();

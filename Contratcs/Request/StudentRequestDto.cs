@@ -6,7 +6,5 @@ public class StudentRequestDto
     
     public string? Email { get; set; }
     
-    public Guid StudentId { get; set; }
-    
     public Guid AssignmentId { get; set; }
 }
