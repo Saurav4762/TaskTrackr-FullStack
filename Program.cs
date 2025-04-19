@@ -18,6 +18,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<IAssignmentService, AssignmentService>();
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+//builder.Services.AddScoped<IAssignmentRepository, AssignmentRepository>();
 
 
 

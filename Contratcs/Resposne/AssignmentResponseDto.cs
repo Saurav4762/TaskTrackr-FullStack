@@ -7,4 +7,8 @@ public class AssignmentResponseDto
     public string AssignmentDescription { get; set; }
     
     public string AssingnmentName { get; set; }
+    
+    public DateTime AssignmentDate { get; set; }
+    public bool AssignmentStatus { get; set; }
+    public Guid StudentId { get; set; }
 }
