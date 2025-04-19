@@ -1,12 +1,12 @@
-﻿using TaskTrackr.Contratcs.Request;
-using TaskTrackr.Entities;
+﻿using TaskTrackr.Contratcs.Resposne;
+
 
 namespace TaskTrackr.Repository.Interface;
 
 public interface IStudentRepository
 {
-    Task<StudentRequestDto> GetStudentByID (int id);
+    Task<StudentResponseDto> GetStudentById (Guid id);
     
-    Task<List<StudentRequestDto>> GetStudents(int id);
+    Task<List<StudentResponseDto>> GetStudents(Guid id);
     
 }
